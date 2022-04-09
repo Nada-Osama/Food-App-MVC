@@ -66,9 +66,7 @@ namespace FoodApp.Controllers
                 return View(loginVM);
 
             }
-
-            //var result = await _signInManager.PasswordSignInAsync(loginVM.EmailAddress,
-            //                                loginVM.Password, loginVM.RememberMe, false);
+            
             var result = await _signInManager.PasswordSignInAsync(user,
                                           loginVM.Password, loginVM.RememberMe, false);
             if (result.Succeeded)
